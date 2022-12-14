@@ -22,18 +22,20 @@ body {
     font-family: Grames;
     background: #4C3A51;
     color: #E7AB79;
+    height: 100vh;
+    width: 100%;
 }
 
 main {
     display: flex;
-    height: 100vh;
+    height: 100%;
     justify-content: center;
 }
 
 .primary-area {
     color: #4C3A51;
     margin: auto;
-    width: 40vw;
+    width: 40%;
     font-family: 'Secular One', sans-serif;
 }
 
@@ -196,8 +198,7 @@ main {
 
 .secondary-area {
     text-align: center;
-    width: 60vw;
-
+    width: 60%;
 }
 
 .secondary-area h1 {
@@ -245,12 +246,20 @@ main {
 footer {
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
+    bottom: 0;
     background: #0f080c;
-    height: 40vh;
-    z-index: 1;
-    text-align: center;
-    padding: 10rem;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+footer a {
+    display: block;
+
+}
+
 @media only screen and (max-width: 1024px)  {
     .secondary-area h1 {
         font-size: 8em;
@@ -310,8 +319,11 @@ footer {
 
 @media only screen and (max-width: 375px) {
     .login-container {
-        width: 20rem;
-        height: 35rem;
+        width: 90%;
+        height: 80%;
+    }
+    .loginLogo{
+        font-size: 2.5em;
     }
     .login-form label p {
         font-size: 0.8em;
