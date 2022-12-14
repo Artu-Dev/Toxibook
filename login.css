@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+@font-face {
+    font-family: Grames;
+    src: url(GRAMES.ttf);
+}
+
+* {
+    margin: 0%;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+::selection {
+    background: #5d0e74;
+}
+
+body {
+    font-family: Grames;
+    background: #4C3A51;
+    color: #E7AB79;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.primary-area {
+    color: #4C3A51;
+    margin: auto;
+    width: 40vw;
+    font-family: 'Secular One', sans-serif;
+}
+
+.login-container{
+    margin-left: auto;
+    background: #E7AB79;
+    border-radius: 0.8rem;
+    width: 23rem;
+    height: 36rem;
+    box-shadow: 10px 10px 17px rgb(0, 0, 0, 0.25);
+}
+
+.loginLogo {
+    display:none;
+    text-align: center;
+    font-size: 4em;
+    font-family: Grames;
+}
+.spanLogo {
+    color: #b25068;
+}
+
+.login-form {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 5rem 1.5rem;
+}
+.form-input{
+    position: relative;
+}
+
+.login-input {
+    width: 85%;
+    height: 2.5rem;
+    padding: 0.5rem;
+    font-size: 1.5em;
+    color: #b25068;
+    background: none;
+}
+
+.form-input > p {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.form-input img {
+    height: 25px;
+    position: absolute;
+    right: 1rem;
+    bottom: 0.6rem;
+    opacity: 80%;
+}
+
+.bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0, 0.1);
+    width: 100%;
+    height: 1px;
+}
+.bar::before {
+    content: "";
+    position: absolute;
+    background:#b25068;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+.form-input>input:focus+.bar::before {
+    transform: scaleX(1);
+}
+
+.btn-Form {
+    margin: auto;
+    font-size: 1.5em;
+    font-weight: bolder;
+    height: 3rem;
+    width: 9rem;
+    background: none;
+    color: #b25068;
+    border: 2px solid #b25068;
+    border-radius: 3rem;
+    transition: all .3s ease-in-out;
+}
+
+.btn-Form:hover {
+    background: #b25068;
+    color: #E7AB79;
+}
+
+.register-btn{
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #4C3A51;
+    text-decoration: 2px underline;
+    transition: all .3s ease-in-out;
+}
+.register-btn:hover {
+    color: #f0f8ff;
+}
+
+.alternative{
+    text-align: center;
+}
+
+.alternative span {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #352938;
+    position: relative;
+    bottom: 1rem;
+}
+
+.alternative span::before, .alternative span::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100px;
+    bottom: 50%;
+    right: 35px;
+    background: #352938;
+}
+
+.alternative span::after{
+    left: 35px;
+}
+
+.social-media {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.Social {
+    background: #352938;
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Social img {
+    height: 35px;
+    
+}
+
+.twiiter {
+    padding-top: 2px;
+}
+
+.secondary-area {
+    text-align: center;
+    width: 60vw;
+
+}
+
+.secondary-area h1 {
+    font-size: 10em;
+    margin-top: 5rem;
+}
+
+.secondary-area h3 {
+    font-size: 2.5em;
+}
+
+.secondary-area h3,h1 {
+    font-weight: normal;
+    filter: drop-shadow(4px 1px 10px rgba(0, 0, 0, 0.25));
+}
+
+.decoration-container .circle1,.circle2,.circle3  {
+    position: absolute;
+    background: linear-gradient(45deg, #774360, #b25068);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} 
+
+.bonecoImg {
+    position: absolute;
+    top: 22rem;
+    right: 10rem;
+    transform: scaleX(-1);
+    height: 700px;
+}
+
+.circle1 {
+    clip-path: circle(25% at left 70%);
+}
+.circle2 {
+    clip-path: circle(30% at right 80%);
+}
+.circle3 {
+    clip-path: circle(15% at center 0%);
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    background: #0f080c;
+    height: 40vh;
+    z-index: 1;
+    text-align: center;
+    padding: 10rem;
+}
+@media only screen and (max-width: 1024px)  {
+    .secondary-area h1 {
+        font-size: 8em;
+    }
+    .secondary-area h3 {
+        font-size: 2em;
+    }
+    .bonecoImg {
+        height: 110%;
+        top: 18.5rem;
+        right: 5rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .primary-area {
+        width: 100vw;
+        font-size: 1.1em;
+    }
+    .login-container{
+        margin: auto;
+        height: 37rem;
+    }
+    .login-form{
+        padding: 2rem 1.5rem;
+    }
+    .loginLogo {
+        display: block;
+    }
+    .social-media{
+        gap: 3rem;
+    }
+    .Social {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .Social img {
+        height: 30px;
+    }
+    .alternative span::before, .alternative span::after {
+        width: 5rem;
+        right: 40px;
+    }
+    .alternative span::after {
+        left: 40px;
+    }
+    .secondary-area {
+        display: none;
+    }
+    .bonecoImg {
+        display: none;
+    }
+    .circle3 {
+        clip-path: circle(20% at right 0%);
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .login-container {
+        width: 20rem;
+        height: 35rem;
+    }
+    .login-form label p {
+        font-size: 0.8em;
+    }
+    .social-media{
+        height: 3rem;
+    }
+    .Social {
+        height: 2rem;
+        width: 2rem;
+    }
+    .Social img {
+        height: 25px;
+        padding-bottom: 1px;
+    }
+}
